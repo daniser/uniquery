@@ -16,7 +16,7 @@ trait PayloadAttributes
      */
     public function getEndpoint(): string
     {
-        return attribute($this->getPayload(), Attributes\Endpoint::class)?->endpoint
+        return attribute($this->getPayload(), Attributes\Endpoint::class)->endpoint
             ?? throw new Exception('Endpoint attribute not defined.');
     }
 
@@ -25,7 +25,7 @@ trait PayloadAttributes
      */
     public function getMethod(): string
     {
-        return attribute($this->getPayload(), Attributes\Method::class)?->method
+        return attribute($this->getPayload(), Attributes\Method::class)->method
             ?? throw new Exception('Method attribute not defined.');
     }
 
@@ -36,7 +36,7 @@ trait PayloadAttributes
      */
     public function getHeaders(): array
     {
-        return attribute($this->getPayload(), Attributes\Headers::class)?->headers
+        return attribute($this->getPayload(), Attributes\Headers::class)->headers
             ?? throw new Exception('Headers attribute not defined.');
     }
 
@@ -46,7 +46,7 @@ trait PayloadAttributes
     public function getResultType(): string
     {
         /** @var class-string<TResult> */
-        return attribute($this->getPayload(), Attributes\ResultType::class)?->type
+        return attribute($this->getPayload(), Attributes\ResultType::class)->type
             ?? throw new Exception('ResultType attribute not defined.');
     }
 }
