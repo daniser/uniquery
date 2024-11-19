@@ -1,0 +1,70 @@
+{
+    "name": "daniser/uniquery",
+    "type": "library",
+    "description": "Universal query lifecycle state management library.",
+    "keywords": ["query", "lifecycle"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/daniser/uniquery/issues",
+        "source": "https://github.com/daniser/uniquery"
+    },
+    "authors": [
+        {
+            "name": "Sergey Danilchenko",
+            "email": "s.danilchenko@ttbooking.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "php-http/discovery": "^1.9.1",
+        "php-http/httplug": "^1.0 || ^2.0",
+        "psr/http-client-implementation": "^1.0",
+        "psr/http-factory": "^1.0.2",
+        "symfony/uid": "^6.4 || ^7.0",
+        "symfony/validator": "^6.4 || ^7.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.57",
+        "jms/serializer": "^3.27",
+        "nyholm/psr7": "^1.0",
+        "php-http/message": "^1.7",
+        "php-http/mock-client": "^1.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^10.0 || ^11.0",
+        "symfony/property-access": "^6.4 || ^7.0",
+        "symfony/serializer": "^6.4 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TTBooking\\UniQuery\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TTBooking\\UniQuery\\Tests\\": "tests/"
+        }
+    },
+    "suggest": {
+        "jms/serializer": "Required to (de)serialize API entities using JMS Serializer",
+        "symfony/serializer": "Required to (de)serialize API entities using Symfony Serializer",
+        "symfony/property-access": "Required to (de)serialize API entities using Symfony Serializer",
+        "php-http/message": "Required to use Guzzle for sending HTTP requests",
+        "php-http/guzzle7-adapter": "Required to use Guzzle for sending HTTP requests"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "analyse": "@php vendor/bin/phpstan analyse",
+        "lint": "@php vendor/bin/php-cs-fixer check",
+        "test": "@php vendor/bin/phpunit"
+    }
+}
