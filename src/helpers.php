@@ -148,7 +148,7 @@ function attributes(object|string $objectOrClass, string $attribute, bool $ascen
  *
  * @throws ReflectionException
  */
-function attribute(object|string $objectOrClass, string $attribute, bool $ascend = false): ?Attribute
+function attribute(object|string $objectOrClass, string $attribute, bool $ascend = false): ?object
 {
     return attributes($objectOrClass, $attribute, $ascend)[0] ?? null;
 }
