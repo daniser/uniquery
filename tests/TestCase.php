@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TTBooking\WBEngine\Tests;
+namespace TTBooking\UniQuery\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TTBooking\WBEngine\Tests\Unit;
+namespace TTBooking\UniQuery\Tests\Unit;
 
-use TTBooking\WBEngine\Tests\TestCase;
+use TTBooking\UniQuery\Tests\TestCase;
 
 /**
  * @internal
