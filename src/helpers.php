@@ -115,7 +115,7 @@ function return_class(object|string $objectOrClass, string $methodName): string
 /**
  * Get specified class attribute(s), optionally following inheritance chain.
  *
- * @template TAttribute of Attribute
+ * @template TAttribute of object
  *
  * @param class-string|object      $objectOrClass
  * @param class-string<TAttribute> $attribute
@@ -139,7 +139,7 @@ function attributes(object|string $objectOrClass, string $attribute, bool $ascen
 /**
  * Get specified class attribute, optionally following inheritance chain.
  *
- * @template TAttribute of Attribute
+ * @template TAttribute of object
  *
  * @param class-string|object      $objectOrClass
  * @param class-string<TAttribute> $attribute
