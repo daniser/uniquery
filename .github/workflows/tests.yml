@@ -31,6 +31,7 @@ jobs:
 
       - name: Execute lint tests
         run: vendor/bin/php-cs-fixer check
+        if: matrix.php != '8.4'
 
       - name: Execute static analysis
         run: vendor/bin/phpstan
