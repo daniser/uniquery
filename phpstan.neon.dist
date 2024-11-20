@@ -8,3 +8,6 @@ parameters:
     ignoreErrors:
         - '#^Trait TTBooking\\UniQuery\\Buildable is used zero times and is not analysed\.$#'
         - '#^Call to method PHPUnit\\Framework\\Assert::assertTrue\(\) with true will always evaluate to true\.$#'
+        -
+            message: '#^Method TTBooking\\UniQuery\\Client::prepareRequest\(\) should return Psr\\Http\\Message\\RequestInterface but returns Psr\\Http\\Message\\MessageInterface\.$#'
+            reportUnmatched: false
