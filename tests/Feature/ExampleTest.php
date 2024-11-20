@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace TTBooking\UniQuery\Tests\Feature;
 
+use PHPUnit\Framework\Attributes\CoversNothing;
 use TTBooking\UniQuery\Tests\TestCase;
 
 /**
  * @internal
- *
- * @coversNothing
  */
+#[CoversNothing]
 class ExampleTest extends TestCase
 {
     public function testExample(): void

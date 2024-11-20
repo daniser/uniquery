@@ -4,3 +4,7 @@ parameters:
         - tests
 
     level: max
+
+    ignoreErrors:
+        - '#^Trait TTBooking\\UniQuery\\Buildable is used zero times and is not analysed\.$#'
+        - '#^Call to method PHPUnit\\Framework\\Assert::assertTrue\(\) with true will always evaluate to true\.$#'
