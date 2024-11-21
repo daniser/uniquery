@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TTBooking\UniQuery;
 
-use Attribute;
 use ReflectionAttribute;
 use ReflectionClass;
 use ReflectionException;
@@ -21,8 +20,6 @@ use ReflectionProperty;
  * @param class-string<T> $class
  *
  * @phpstan-return T
- *
- * @throws ReflectionException
  */
 function entity(string $class): object
 {
@@ -121,8 +118,6 @@ function return_class(object|string $objectOrClass, string $methodName): string
  * @param class-string<TAttribute> $attribute
  *
  * @return list<TAttribute>
- *
- * @throws ReflectionException
  */
 function attributes(object|string $objectOrClass, string $attribute, bool $ascend = false): array
 {
@@ -145,8 +140,6 @@ function attributes(object|string $objectOrClass, string $attribute, bool $ascen
  * @param class-string<TAttribute> $attribute
  *
  * @phpstan-return null|TAttribute
- *
- * @throws ReflectionException
  */
 function attribute(object|string $objectOrClass, string $attribute, bool $ascend = false): ?object
 {
