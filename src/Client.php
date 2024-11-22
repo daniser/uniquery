@@ -108,7 +108,7 @@ class Client implements ClientInterface
      */
     protected function prepareRequest(string $endpoint, string $method = 'GET', array $headers = [], array|string $body = ''): RequestInterface
     {
-        $request = $this->requestFactory->createRequest($method, "$this->baseUri/$endpoint");
+        $request = $this->requestFactory->createRequest($method, rtrim("$this->baseUri/$endpoint", '/'));
 
         foreach ($headers as $header => $value) {
             $request = $request->withHeader($header, $value);

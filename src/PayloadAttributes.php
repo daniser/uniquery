@@ -11,33 +11,22 @@ use Exception;
  */
 trait PayloadAttributes
 {
-    /**
-     * @throws Exception
-     */
     public function getEndpoint(): string
     {
-        return attribute($this->getPayload(), Attributes\Endpoint::class)->endpoint
-            ?? throw new Exception('Endpoint attribute not defined.');
+        return attribute($this->getPayload(), Attributes\Endpoint::class)->endpoint ?? '';
     }
 
-    /**
-     * @throws Exception
-     */
     public function getMethod(): string
     {
-        return attribute($this->getPayload(), Attributes\Method::class)->method
-            ?? throw new Exception('Method attribute not defined.');
+        return attribute($this->getPayload(), Attributes\Method::class)->method ?? 'POST';
     }
 
     /**
      * @return array<string, string>
-     *
-     * @throws Exception
      */
     public function getHeaders(): array
     {
-        return attribute($this->getPayload(), Attributes\Headers::class)->headers
-            ?? throw new Exception('Headers attribute not defined.');
+        return attribute($this->getPayload(), Attributes\Headers::class)->headers ?? [];
     }
 
     /**
