@@ -35,6 +35,8 @@ interface QueryInterface
 
     public function getPayload(): object;
 
+    public function getAlias(): string;
+
     public function getEndpoint(): string;
 
     public function getMethod(): string;

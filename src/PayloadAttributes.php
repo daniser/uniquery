@@ -11,6 +11,12 @@ use Exception;
  */
 trait PayloadAttributes
 {
+    public function getAlias(): string
+    {
+        return attribute($this->getPayload(), Attributes\Alias::class)->alias
+            ?? snake(basename(str_replace('\\', '/', static::class)));
+    }
+
     public function getEndpoint(): string
     {
         return attribute($this->getPayload(), Attributes\Endpoint::class)->endpoint ?? '';
